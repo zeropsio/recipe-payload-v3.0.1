@@ -1,9 +1,8 @@
-// storage-adapter-import-placeholder
-import { postgresAdapter } from '@payloadcms/db-postgres':
+import { postgresAdapter } from '@payloadcms/db-postgres';
 import { s3Storage } from '@payloadcms/storage-s3';
 import { nodemailerAdapter } from '@payloadcms/email-nodemailer';
 
-import sharp from 'sharp'; // sharp-import
+import sharp from 'sharp';
 import path from 'path';
 import { buildConfig } from 'payload';
 import { fileURLToPath } from 'url';
@@ -104,4 +103,4 @@ export default buildConfig({
       debug: true
     }
   })
-})
+});
