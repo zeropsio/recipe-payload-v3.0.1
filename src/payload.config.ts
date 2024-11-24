@@ -100,7 +100,7 @@ export default buildConfig({
       port: 1025,
       secure: false,
       logger: true,
-      debug: true
+      // debug: true
     }
   })
 });
