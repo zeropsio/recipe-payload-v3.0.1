@@ -12,7 +12,6 @@ zerops:
       base: nodejs@20
       os: ubuntu
       buildCommands:
-        - ping -6 -c 10 mailpit
         - pnpm i
         - pnpm exec next telemetry disable
         - pnpm payload migrate
