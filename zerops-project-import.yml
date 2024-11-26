@@ -1,6 +1,6 @@
 #yamlPreprocessor=on
 project:
-  name: payload-api
+  name: Payload CMS 3.0.1
   tags:
     - zerops-recipe
 services:
