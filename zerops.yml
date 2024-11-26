@@ -14,7 +14,6 @@ zerops:
       buildCommands:
         - pnpm i
         - pnpm exec next telemetry disable
-        - ping -4 -c 8 mailpit
         - pnpm payload migrate
         - pnpm build
       deployFiles:
@@ -37,6 +36,4 @@ zerops:
       ports:
         - port: 3000
           httpSupport: true
-      initCommands:
-        - sudo ping -4 -c 8 mailpit
       start: pnpm start
