@@ -13,7 +13,7 @@ You can either click the deploy button to deploy directly on Zerops, or manually
 ## Recipe features
 
 - Zerops **PostgreSQL 16.2** service as database
-- Zerops **Object Storage** (S3 compatible) service as file system
+- Zerops **Object Storage** (S3 compatible) service as file system using a private bucket
 - Logs set up to use **syslog** and accessible through Zerops GUI
 - Utilization of Zerops built-in **environment variables** system
 - [Mailpit](https://github.com/axllent/mailpit) as **SMTP mock server**
