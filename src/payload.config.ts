@@ -66,6 +66,7 @@ export default buildConfig({
     }
   }),
   collections: [Pages, Posts, Media, Categories, Users],
+  logger: "sync",
   cors: [getServerSideURL()].filter(Boolean),
   globals: [Header, Footer],
   plugins: [
@@ -98,8 +99,8 @@ export default buildConfig({
     transportOptions: {
       host: 'mailpit',
       port: 1025,
-      secure: false
-      // logger: true,
+      secure: false,
+      logger: true,
       // debug: true
     }
   })
