@@ -73,4 +73,5 @@ export const migrate = async function migrate(args) {
     }
 };
 
+
 //# sourceMappingURL=migrate.js.map
