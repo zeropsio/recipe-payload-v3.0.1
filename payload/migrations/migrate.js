@@ -8,19 +8,31 @@ export const migrate = async function migrate(args) {
     const migrationFiles = args?.migrations || await readMigrationFiles({
         payload
     });
-    console.log('... migrationFiles:', migrationFiles);
+    payload.logger.info({
+        msg: `... migrationFiles: ${JSON.stringify(migrationFiles)}`
+    });
     const { existingMigrations, latestBatch } = await getMigrations({
         payload
     });
-    console.log('... existingMigrations:', existingMigrations);
-    console.log('... latestBatch:', latestBatch);
+    payload.logger.info({
+        msg: `... existingMigrations: ${JSON.stringify(existingMigrations)}`
+    });
+    payload.logger.info({
+        msg: `... latestBatch: ${latestBatch}`
+    });
     const newBatch = latestBatch + 1;
-    console.log('... newBatch:', newBatch);
+    payload.logger.info({
+        msg: `... newBatch: ${newBatch}`
+    });
     // Execute 'up' function for each migration sequentially
     for (const migration of migrationFiles){
-        console.log('... migration:', migration);
+        payload.logger.info({
+            msg: `... migration: ${JSON.stringify(migration)}`
+        });
         const existingMigration = existingMigrations.find((existing)=>existing.name === migration.name);
-        console.log('... existingMigration:', existingMigration);
+        payload.logger.info({
+            msg: `... existingMigration: ${existingMigration}`
+        });
         // Run migration if not found in database
         if (existingMigration) {
             continue;
