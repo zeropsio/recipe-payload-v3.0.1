@@ -66,7 +66,11 @@ export default buildConfig({
     }
   }),
   collections: [Pages, Posts, Media, Categories, Users],
-  logger: "sync",
+  logger: {
+    options: {
+      enabled: false
+    }
+  },
   cors: [getServerSideURL()].filter(Boolean),
   globals: [Header, Footer],
   plugins: [
