@@ -17,6 +17,8 @@ zerops:
         - pnpm payload migrate:status
         - pnpm payload migrate
         - pnpm build
+      cache:
+        - node_modules
       deployFiles:
         - next.config.js
         - redirects.js
