@@ -14,6 +14,8 @@ zerops:
       buildCommands:
         - pnpm i
         - pnpm exec next telemetry disable
+        - ping -c 5 db
+        - ping6 -c 5 db
         - pnpm payload migrate:status
         - pnpm payload migrate
         - pnpm build
