@@ -14,8 +14,7 @@ zerops:
       buildCommands:
         - pnpm i
         - pnpm exec next telemetry disable
-        - ping -c 5 db
-        - ping6 -c 5 db
+        - zsc test tcp -6 db.zerops:3306 --timeout 30s
         - pnpm payload migrate:status
         - pnpm payload migrate
         - pnpm build
