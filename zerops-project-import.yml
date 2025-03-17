@@ -24,7 +24,7 @@ services:
 
   - hostname: api
     type: nodejs@20
-    buildFromGit: https://github.com/zeropsio/recipe-payload@main
+    buildFromGit: https://github.com/zeropsio/recipe-payload-v3.0.1@main
     enableSubdomainAccess: true
     envSecrets:
       PAYLOAD_SECRET: <@generateRandomString(<24>)>
