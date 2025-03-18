@@ -1,4 +1,4 @@
-# Zerops x Payload CMS
+# Zerops x Payload CMS 3.0.1
 
 [Payload CMS](https://github.com/payloadcms/payload) is fully open source and can be used both as an app framework and a headless CMS. This recipe showcases how to set up and run Payload on Zerops properly. It was created using the [create-payload-app](https://www.npmjs.com/package/create-payload-app) CLI, based on Payload version v3.0.1 and its [website](https://github.com/payloadcms/payload/tree/main/templates/website) template.
 
